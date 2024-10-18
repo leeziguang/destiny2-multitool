@@ -35,7 +35,7 @@ export interface StoreActivityValues {
   assists: number[],
   efficiency: number[],
   completed: number[],
-  activityDurationSeconds: number[],
+  duration: number[],
   period: string[],
   [key: string]: string[] | number[]
 }

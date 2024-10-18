@@ -25,7 +25,7 @@ export const TestPage = observer(() => {
         </div>
       )}
       {activityStore.activityDetailsLoadedFlag && (
-        <ActivityHistoryEChart activityMode={3}/>
+        <ActivityHistoryEChart activityMode={3} numberOfActivities={10}/>
       )}
     </div>
   )

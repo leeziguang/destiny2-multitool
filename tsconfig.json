@@ -30,7 +30,8 @@
     "noEmitHelpers": true,
     "downlevelIteration": true,
     "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "allowUnusedLabels": true,
   },
   "include": [
     "./src/**/*",

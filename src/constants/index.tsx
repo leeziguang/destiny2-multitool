@@ -4,3 +4,17 @@ export const cookies = `bungleatk=wa=lqb78Ko3IkOFVmATPUdZ5v3mpczKUt6pCGZbqoqK.vT
 export const csrf = _bundleCookieVal
 export const clientId = 48375;
 export const activityKeys = ['kills', 'deaths', 'assists', 'efficiency', 'completed', 'activityDurationSeconds', 'period']
+export const dateMappings:{[key:number]: string} = {
+  1: "Jan",
+  2: "Feb",
+  3: "Mar",
+  4: "Apr",
+  5: "May",
+  6: "Jun",
+  7: "Jul",
+  8: "Aug",
+  9: "Sep",
+  10: "Oct",
+  11: "Nov",
+  12: "Dec"
+};

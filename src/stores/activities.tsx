@@ -2,6 +2,7 @@ import { fetchActivityHistory } from "src/services/fetch";
 import { userStore } from "./user";
 import { ActivityWrapper, StoreActivityValues } from "src/types/activityTypes";
 import { makeAutoObservable } from "mobx";
+import { dateFormatter } from "src/services/helper";
 
 export class ActivityStore{
   activityHistory: ActivityWrapper[] = []
@@ -37,7 +38,7 @@ export class ActivityStore{
           assists: [],
           efficiency: [],
           completed: [],
-          activityDurationSeconds: [],
+          duration: [],
           period: [],
         };
       }
@@ -46,8 +47,8 @@ export class ActivityStore{
       this.activityDetails[mode].assists.unshift(activity.values.assists.basic.value);
       this.activityDetails[mode].completed.unshift(activity.values.completed.basic.value); 
       this.activityDetails[mode].efficiency.unshift(activity.values.efficiency.basic.value);
-      this.activityDetails[mode].activityDurationSeconds.unshift(activity.values.activityDurationSeconds.basic.value);
-      this.activityDetails[mode].period.unshift(activity.period)
+      this.activityDetails[mode].duration.unshift(activity.values.activityDurationSeconds.basic.value/60);
+      this.activityDetails[mode].period.unshift(dateFormatter(activity.period))
     })
   }
 }
